@@ -135,6 +135,16 @@ class VC_Capture: UIViewController{
             self.performPostRequest(store_num: store_receipt_num_str, store_id: store_id_str)
         }
     }
+    
+    @IBAction func opRefresh(_ sender: Any) {
+        txtStore.text = ""
+        txtReceiptNum.text = ""
+        
+        imgVoucher.image = nil
+        imgReceipt.image = nil
+        imgReceipt2.image = nil
+        imgMisc.image = nil
+    }
 }
 
 extension VC_Capture {

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fZY-tk-mDA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -30,6 +30,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkk-02-qkV">
+                                        <rect key="frame" x="346" y="13" width="47" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
+                                        <connections>
+                                            <action selector="opRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHS-WR-iCT"/>
+                                        </connections>
+                                    </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LJ-PK-NSj">
                                         <rect key="frame" x="0.0" y="60" width="393" height="699"/>
                                         <subviews>
@@ -516,7 +524,9 @@
                                     <constraint firstItem="Si5-Ac-JBj" firstAttribute="leading" secondItem="Qwb-Ow-cP8" secondAttribute="leading" constant="40" id="aux-op-qcf"/>
                                     <constraint firstItem="sDQ-bP-2NP" firstAttribute="top" secondItem="Qwb-Ow-cP8" secondAttribute="top" id="dNc-d6-vBk"/>
                                     <constraint firstItem="9LJ-PK-NSj" firstAttribute="leading" secondItem="Qwb-Ow-cP8" secondAttribute="leading" id="dzh-kb-zqC"/>
+                                    <constraint firstItem="bkk-02-qkV" firstAttribute="centerY" secondItem="sDQ-bP-2NP" secondAttribute="centerY" id="pIt-BI-C3v"/>
                                     <constraint firstAttribute="trailing" secondItem="Si5-Ac-JBj" secondAttribute="trailing" constant="40" id="wwr-gk-ped"/>
+                                    <constraint firstAttribute="trailing" secondItem="bkk-02-qkV" secondAttribute="trailing" id="yu5-o2-TfK"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -570,6 +580,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
